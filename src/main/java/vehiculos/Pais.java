@@ -13,4 +13,26 @@ public class Pais {
   public void setNombre(String nombre) {
     this.nombre = nombre;
   }
+  public static Pais paisMasVEndedor() {
+    ArrayList<Pais> paises = new ArrayList<Pais>();
+    for (int i=0; i<Vehiculo.getVehiculos().size(); i++) {
+      Pais x=Vehiculo.getVehiculos().get(i).getFabricante().getPais();
+      if (paises.contains(x)==false) {
+        paises.add(x);
+      }
+    }
+    int lista[];
+    lista = new int[paises.size()];
+    for (Vehiculo vehiculo : Vehiculo.getVehiculos()) {
+      int indice=paises.indexOf(vehiculo.getFabricante().getPais());
+      list[indice]++;
+    }
+    int n = 0;
+    for (int i=1; i<lista.length; i++) {
+      if (lista[i]>lista[cont]) {
+        n=i;
+      }
+    }
+    return paises.get(n);
+  }
 }
