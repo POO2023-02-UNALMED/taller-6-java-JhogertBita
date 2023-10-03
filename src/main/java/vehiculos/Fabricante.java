@@ -25,7 +25,7 @@ public class Fabricante {
   		ArrayList<Fabricante> fabricantes=new ArrayList<Fabricante>();
   		for (int i=0; i<Vehiculo.getVehiculos().size(); i++) {
   			Fabricante x = Vehiculo.getVehiculos().get(i).getFabricante();
-  			if (fabricantes.contains(x)=false) {
+  			if (fabricantes.contains(x)==false) {
   				fabricantes.add(x);
   			}
   		}
