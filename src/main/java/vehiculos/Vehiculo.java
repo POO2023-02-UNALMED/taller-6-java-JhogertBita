@@ -84,4 +84,7 @@ public class Vehiculo {
 	public static void addVehiculos(Vehiculo vehiculo) {
 		Vehiculo.vehiculos.add(vehiculo);
 	}
+    public static String vehiculosPorTipo() {
+		return "Automoviles: " + Automovil.getCantidadAutomoviles() + "\nCamionetas: " + Camioneta.getCantidadCamionetas() + "\nCamiones: " + Camion.getCantidadCamiones();
+	}
 }
